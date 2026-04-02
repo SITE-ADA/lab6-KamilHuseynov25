@@ -36,13 +36,13 @@ public class CategoryServiceImpl implements CategoryService {
         Category category = new Category();
         category.setName(dto.getName());
         Category saved = categoryRepository.save(category);
-        return new CategoryResponseDto(saved.getName());
+        return new CategoryResponseDto(saved.getId(), saved.getName());
     }
 
     @Override
     public List<CategoryResponseDto> getAll() {
         return categoryRepository.findAll().stream()
-                .map(c -> new CategoryResponseDto(c.getName()))
+                .map(c -> new CategoryResponseDto(c.getId(), c.getName()))
                 .collect(Collectors.toList());
     }
 
