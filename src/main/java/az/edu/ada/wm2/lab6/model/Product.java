@@ -10,7 +10,6 @@ public class Product {
     private BigDecimal price;
     private LocalDate expirationDate;
 
-    // Constructors
     public Product() {
     }
 
@@ -28,7 +27,6 @@ public class Product {
         this.expirationDate = expirationDate;
     }
 
-    // Getters and Setters
     public UUID getId() {
         return id;
     }
