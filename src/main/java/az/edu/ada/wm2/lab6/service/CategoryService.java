@@ -10,6 +10,6 @@ import java.util.UUID;
 public interface CategoryService {
     CategoryResponseDto create(CategoryRequestDto dto);
     List<CategoryResponseDto> getAll();
-    void addProduct(UUID categoryId, UUID productId);
+    CategoryResponseDto addProduct(UUID categoryId, UUID productId);
     List<ProductResponseDto> getProducts(UUID categoryId);
 }
